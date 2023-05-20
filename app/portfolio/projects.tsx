@@ -39,7 +39,7 @@ export default async function Projects(){
         
             {projectsData &&
                 projectsData.items.map((project , index)=>
-                    <div className="lg:w-1/3 sm:w-1/2 p-4">
+                    <div className="lg:w-1/3 sm:w-1/2 p-4" key={project.fields.name}>
           <div className="flex relative">
                 <Image quality={100} width={100} height={100} alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center" src={"https:"+project.fields.image.fields.file.url} />
                 <div className="absolute inset-0 flex items-center justify-center z-10">

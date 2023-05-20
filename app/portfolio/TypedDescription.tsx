@@ -1,10 +1,9 @@
 'use client';
-import { CardDescription } from '@/components/ui/card';
 import { useEffect, useRef, useState } from 'react';
 import Typed from 'typed.js';
 
 export default function TypedDescription(){
-    const descRef = useRef<typeof CardDescription>(null);
+    const descRef = useRef<HTMLSpanElement>(null);
     const isTyping = useRef({
         isTyping:false
     });

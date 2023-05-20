@@ -45,6 +45,7 @@ export default function NewApp(){
 
   </CardFooter>
 </Card>
+{/* @ts-expect-error Async Server Component */}
 <Projects />
 <Footer />
 

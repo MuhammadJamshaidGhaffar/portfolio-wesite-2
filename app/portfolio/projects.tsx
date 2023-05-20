@@ -16,7 +16,7 @@ export default async function Projects(){
       });
       let projectsData : {items:ContentfulProjectType[]} | null=  null;
         try{
-        projectsData  = await client.getEntries({content_type:"project"});
+        projectsData  = ((await client.getEntries({content_type:"project"})) as unknown ) as {items:ContentfulProjectType[]};
         console.log(projectsData?.items);
         console.log(projectsData?.items[0].fields.image)
         }
